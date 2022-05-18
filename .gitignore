@@ -1,0 +1,6 @@
+*.hcl
+*.tfstate
+*.tfstate.backup
+tfplan
+.terraform/*
+.terraform
