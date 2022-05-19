@@ -8,6 +8,7 @@ locals {
 
 resource "aws_s3_bucket" "www_bucket"{
     bucket = local.bucket_name
+    force_destroy = true
 }
 
 resource "aws_s3_bucket_website_configuration" "www_bucket" {
