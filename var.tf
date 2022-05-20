@@ -1,5 +1,5 @@
 variable "namespace" {
-  description = "The project namespace to use for unique resource naming"
+  description = "The project namespace to use for unique resource naming and tagging"
   default     = "terraform-osm-aed"
   type        = string
 }

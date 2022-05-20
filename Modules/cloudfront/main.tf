@@ -10,7 +10,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name = var.s3_URL
     origin_id   = local.s3_origin_id
-
     custom_origin_config {
       http_port = 80
       https_port = 443
@@ -39,10 +38,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   # Cache behavior with precedence 1
 
   price_class = "PriceClass_100"
-
-  tags = {
-    Environment = "test"
-  }
 
   restrictions{
     geo_restriction{

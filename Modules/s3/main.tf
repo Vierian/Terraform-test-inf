@@ -1,13 +1,5 @@
-resource "random_pet" "www_bucket" {
-  length = 1
-}
-
-locals {
-  bucket_name = "${random_pet.www_bucket.id}-${var.namespace}"
-}
-
 resource "aws_s3_bucket" "www_bucket"{
-    bucket = local.bucket_name
+    bucket = "${var.namespace}-static-website-bucket"
     force_destroy = true
 }
 
